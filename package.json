@@ -1,0 +1,20 @@
+{
+  "name": "metatrader5-sdk",
+  "version": "0.1.0",
+  "description": "A Node.js SDK for interacting with the MetaTrader 5 Web API, enabling seamless integration of MetaTrader 5 trading features into your applications.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/altug0/metatrader5-sdk.git"
+  },
+  "keywords": ["MetaTrader 5", "Web API", "SDK", "trading", "Node.js"],
+  "author": "altug0",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/altug0/metatrader5-sdk/issues"
+  },
+  "homepage": "https://github.com/altug0/metatrader5-sdk#readme"
+}
