@@ -10,3 +10,41 @@ Next, you can install the `metatrader5-sdk` package by running the following com
 
 ```bash
 npm install metatrader5-sdk
+```
+
+## Create an Instance
+
+define metatrader instance
+
+```javascript
+const Metatrader5 = require('metatrader5-sdk')
+// ...
+const mt5Instance = new MT5Request('your.host.com', 443, {
+    login: "API_USER_LOGIN",
+    password: "API_USER_PASS",
+    build: "VERSION",
+    agent: "AGENT_NAME_FOR_TRACKING"
+});
+// ...
+```
+
+### User Library Example
+```javascript
+const mt5Instance = new MT5Request('your.host.com', 443, {
+    login: "API_USER_LOGIN",
+    password: "API_USER_PASS",
+    build: "VERSION",
+    agent: "AGENT_NAME_FOR_TRACKING"
+});
+
+async func(){
+    await mt5Instance.user.get("USER_LOGIN")
+}
+
+```
+### Available API
+
+| Library  | Function | Description | Return |
+| ------------- | ------------- | ------------- | ------------- |
+| user  | get("USER_LOGIN")  | get user information  | Object |
+| user  | checkPassword("USER_LOGIN", "USER_TYPE", "USER_PASSWORD") | check users password  | Boolean |
