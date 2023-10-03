@@ -19,7 +19,7 @@ define metatrader instance
 ```javascript
 const Metatrader5 = require('metatrader5-sdk')
 // ...
-const mt5Instance = new MT5Request('your.host.com', 443, {
+const mt5Instance = new Metatrader5('your.host.com', 443, {
     login: "API_USER_LOGIN",
     password: "API_USER_PASS",
     build: "VERSION",
@@ -47,4 +47,5 @@ async func(){
 | Library  | Function | Description | Return |
 | ------------- | ------------- | ------------- | ------------- |
 | user  | get("USER_LOGIN")  | get user information  | Object |
-| user  | checkPassword("USER_LOGIN", "USER_TYPE", "USER_PASSWORD") | check users password  | Boolean |
+| user  | checkPassword("USER_LOGIN", "USER_PASSWORD", "PASSWORD_TYPE") | check users password  | Boolean |
+| user  | changePassword("USER_LOGIN", "CURRENT_PASSWORD", "NEW_PASSWORD", "PASSWORD_TYPE") | check users password  | Boolean |
